@@ -2,7 +2,7 @@ from fastapi import FastAPI, status
 from utilities import get_hased_password, verify_password
 
 app = FastAPI(
-    title="Social Media Feed",
+    title="Todo Application",
     version="1.0"
 )
 
