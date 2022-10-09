@@ -8,6 +8,9 @@ fastapi = "*"
 uvicorn = "*"
 passlib = "*"
 bcrypt = "*"
+sqlalchemy = "*"
+alembic = "*"
+pytest = "*"
 
 [dev-packages]
 
