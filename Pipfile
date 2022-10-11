@@ -11,6 +11,7 @@ bcrypt = "*"
 sqlalchemy = "*"
 alembic = "*"
 pytest = "*"
+psycopg2 = "*"
 
 [dev-packages]
 
