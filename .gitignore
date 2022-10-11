@@ -52,10 +52,10 @@ coverage.xml
 .pytest_cache/
 
 #Common files
-.ini
-.txt
-.docx
-.ppt
+*.ini
+*.txt
+*.docx
+*.ppt
 
 # Translations
 *.mo
