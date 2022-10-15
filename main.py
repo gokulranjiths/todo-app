@@ -3,6 +3,7 @@ from utilities.password import get_hased_password, verify_password
 from database.database import SessionLocal, engine
 from sqlalchemy.orm import Session
 from models.task import Task
+from models.transaction import Transaction
 from typing import List
 
 app = FastAPI(
@@ -24,4 +25,9 @@ def root():
 @app.get("/records/")
 def show_records(db: Session = Depends(get_db)):
     records = db.query(Task).all()
+    return records
+
+@app.get("/manage")
+def show_manage(db: Session = Depends(get_db)):
+    records = db.query(Transaction).all()
     return records
