@@ -6,3 +6,4 @@ class Task(Base):
 
     id = Column(String, primary_key=True, index=True, nullable=False)
     text = Column(String, index=True, nullable=False)
+    status = Column(String, index=True )
