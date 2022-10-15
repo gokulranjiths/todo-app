@@ -1,8 +1,8 @@
 from fastapi import FastAPI, status, Depends, HTTPException
-from utilities import get_hased_password, verify_password
-from database import SessionLocal, engine
+from utilities.password import get_hased_password, verify_password
+from database.database import SessionLocal, engine
 from sqlalchemy.orm import Session
-import schemas, models
+from models.task import Task
 from typing import List
 
 app = FastAPI(
@@ -23,5 +23,5 @@ def root():
 
 @app.get("/records/")
 def show_records(db: Session = Depends(get_db)):
-    records = db.query(models.Task).all()
+    records = db.query(Task).all()
     return records
